@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tailwind 3</title>
+  <title>Tailwind CSS</title>
   <meta charset="utf-8">
   <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.0.24/dist/tailwind.min.css" rel="stylesheet"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,29 +9,103 @@
 </head>
 <body>
 
-<div class="mx-auto px-5 text-center py-5 bg-green-300">
-  <h1 class="text-3xl font-bold mb-5 mt-10">Tailwind Test</h1>
-  <p class="mb-10">Resize this responsive page to see the effect!</p> 
+  <nav class="bg-green-700 px-2 sm:px-4 py-2.5">
+    <div class="container flex flex-wrap justify-between items-center mx-auto">
+      <a href="#" class="mx-2 text-white self-center text-xl font-bold whitespace-nowrap">Tailwind</a>
+      <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-6 h-6" fill="rgb(255 255 255)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        <svg class="hidden w-6 h-6" fill="rgb(255 255 255)" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 text-white/75 font-normal md:hover:text-white md:p-0" aria-current="page">Režģa izkārtojums</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 text-white/75 font-normal md:hover:text-white md:p-0">Attēlu režģis</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 text-white/75 font-normal md:hover:text-white md:p-0">Teksts</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 pr-4 pl-3 text-white/75 font-normal md:hover:text-white md:p-0">Pielāgojams attēls</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<div class="p-5 bg-green-700 text-white text-center">
+  <h1 class="mb-5 mt-10 text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold">Tailwind CSS</h1>
+  <p class="mb-10 text-xl font-light">Reaģējošu elementu demonstrācija ar Tailwind CSS (v3.0.24) izstrādes satvaru</p> 
 </div>
   
-<div class="container mx-auto mt-5">
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="px-5">
-      <h3 class="font-medium leading-tight text-3xl">Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+<div class="container mx-auto p-2 mt-5">
+  <h2 class="font-medium text-2xl xl:text-4xl">Režģa izkārtojums</h2>
+  <div class="grid gap-1 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 pt-5">
+    <div class="mb-4">
+      <!-- h3 Tailwind netiek piešķirts īpašs izmērs, tādēļ izmantota text-3xl klase ar fonta izmēru kā 1.875rem -->
+      <h3 class="font-medium text-2xl xl:text-3xl mb-4">Konteineris 1</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
     </div>
-    <div class="px-5">
-      <h3 class="font-medium leading-tight text-3xl">Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="mb-4">
+      <h3 class="font-medium text-2xl xl:text-3xl mb-4">Konteineris 2</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
     </div>
-    <div class="px-5">
-      <h3 class="font-medium leading-tight text-3xl">Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="mb-4">
+      <h3 class="font-medium text-2xl xl:text-3xl mb-4">Konteineris 3</h3>        
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
+    </div>
+    <div class="mb-4">
+      <h3 class="font-medium text-2xl xl:text-3xl mb-4">Konteineris 4</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
+    </div>
+    <div class="mb-4">
+      <h3 class="font-medium text-2xl xl:text-3xl mb-4">Konteineris 5</h3>
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
+    </div>
+    <div class="mb-4">
+      <h3 class="font-medium text-2xl xl:text-3xl mb-4">Konteineris 6</h3>        
+      <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
     </div>
   </div>
+</div>
+
+<div class="container mx-auto mt-5 px-2">
+  <h2 class="font-medium text-2xl xl:text-4xl pb-2">Attēlu režģis</h2>
+  <div class="grid gap-1 grid-cols-1 lg:grid-cols-3 pt-3">
+    <div class="pt-3">
+      <img src="image/pexels-vasanth-babu-797797.jpg" class="" alt="plants">
+    </div>
+    <div class="pt-3">
+      <img src="image/pexels-photomix-company-1002703.jpg" class="" alt="plants">
+    </div>
+    <div class="pt-3">
+      <img src="image/pexels-ray-piedra-1696735.jpg" class="" alt="plants">       
+    </div>
+  </div>
+</div>
+
+<div class="container mx-auto mt-5 px-2">
+  <h2 class="font-medium text-2xl xl:text-4xl pb-2">Teksts</h2>
+  <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse
+     tempus sit amet sem sit amet condimentum. Fusce condimentum est eget sem vehicula, quis imperdiet quam varius. Maecenas eu varius mi. 
+     Duis nunc nibh, tincidunt quis elementum et, eleifend quis urna. Maecenas enim nisi, fringilla et auctor in, aliquam et nibh. 
+     Nulla dapibus magna vitae ipsum mollis sagittis. Cras ultrices purus fringilla eleifend vestibulum. Nullam ullamcorper lobortis felis 
+     a euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus at ornare orci. Ut diam 
+     est, venenatis et lectus et, aliquam vulputate metus. Proin a mi sollicitudin, tempor ante vitae, ullamcorper odio.</p>
+</div>
+
+<div class="container mx-auto mt-5 px-2">
+  <h2 class="font-medium text-2xl xl:text-4xl pb-2">Pielāgojams attēls</h2>
+  <img src="image/pexels-cottonbro-4505144.jpg" class="pt-3" alt="plants">
 </div>
 
 </body>
