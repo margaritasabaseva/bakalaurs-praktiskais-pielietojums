@@ -9,11 +9,23 @@
 </head>
 
 <body>
-<!-- Pievienot komentārus -->
+<!-- Navigācijas izvēlne, kas tiek paslēpta zem pogas <768px skatlauka platumā un atvērta >767px skatlauka platumā -->
   <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-success">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="navbar-brand fw-bold">
+        <!-- SVG ikona -->
+        <svg width="24px" height="24px" fill="white" viewBox="0 0 24 24" class="d-inline-block align-text-top" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>plant</title>
+          <g>
+            <path d="M10.89,12a1,1,0,0,1-.75-.34,1,1,0,0,1-.24-.78c.41-3.27,2.93-9.44,9.56-9.44a1,1,0,0,1,1,.87,9.42,9.42,0,0,1-2,6.84C16.75,11.05,14.22,12,10.89,12Zm7.6-8.51C14.23,4,12.66,7.94,12.13,10a7,7,0,0,0,4.79-2.12A7,7,0,0,0,18.49,3.5Z"/>
+            <path d="M10.89,12h-.12c-2.51-.32-7.26-2.26-7.26-7.38a1,1,0,0,1,.88-1A7.26,7.26,0,0,1,9.68,5.2,7.33,7.33,0,0,1,11.89,11a1,1,0,0,1-1,1ZM5.6,5.61c.48,2.57,2.76,3.67,4.21,4.12a4.72,4.72,0,0,0-1.44-3A4.81,4.81,0,0,0,5.6,5.61Z"/>
+            <path d="M10.89,16.18a1,1,0,0,1-1-1V11a1,1,0,1,1,2,0v4.17A1,1,0,0,1,10.89,16.18Z"/>
+            <path d="M13.55,22.55H8.63a4,4,0,0,1-4-4V15.18a1,1,0,0,1,1-1H16.55a1,1,0,0,1,1,1v3.37A4,4,0,0,1,13.55,22.55ZM6.63,16.18v2.37a2,2,0,0,0,2,2h4.92a2,2,0,0,0,2-2V16.18Z"/>
+          </g>
+        </svg>
+        Bootstrap
+      </div>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -37,11 +49,10 @@
 
 <div class="container-fluid py-5 bg-success text-white text-center">
   <h1 class="display-1 fw-bold pt-3">Bootstrap</h1>
-  <!-- <h1 class="fw-bold">Bootstrap</h1> -->
   <p class="lead">Reaģējošu elementu demonstrācija ar Bootstrap (v5.1.3) izstrādes satvaru</p> 
-  <!-- <p>Reaģējošu elementu demonstrācija ar Bootstrap (v5.1.3) izstrādes satvaru</p> -->
 </div>
-  
+
+<!-- Režģis, kas sastāv no rindām un kolonnām -->
 <div class="container mt-5">
   <h2 id="rezga-izkartojums">Režģa izkārtojums</h2>
   <div class="row">
@@ -49,7 +60,9 @@
     <div class="col-xl-2 col-md-4 col-sm-6 pt-3">
       <!-- h3 Bootstrap satvarā norāda fonta izmēru kā 1.75rem -->
       <h3>Konteineris 1</h3>
+      <!-- Pēc virsrakstiem automātiski tiek piešķirta atstarpe (margin) 0.5rem izmērā -->
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <!-- Pēc rindkopām automātiski tiek piešķirta atstarpe (margin) 1rem izmērā -->
       <p>Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse tempus sit amet sem sit amet condimentum.</p>
     </div>
     <div class="col-xl-2 col-md-4 col-sm-6 pt-3">
@@ -83,63 +96,58 @@
 <div class="container mt-5">
   <h2 id="attelu-rezgis">Attēlu režģis</h2>
   <div class="row">
-    <div class="col-lg-4 pt-3">
-      <div class="card">
+    <div class="col-lg-3 col-md-6 pt-3">
+      <div class="card border-0">
         <img src="image/pexels-vasanth-babu-797797.jpg" class="img-fluid" alt="plants">
         <div class="card-img-overlay">
           <h4 class="card-title text-white">1. attēls</h5>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 pt-3">
-      <div class="card">
+    <div class="col-lg-3 col-md-6 pt-3">
+      <div class="card border-0">
         <img src="image/pexels-photomix-company-1002703.jpg" class="img-fluid" alt="plants">
         <div class="card-img-overlay">
           <h4 class="card-title text-white">2. attēls</h5>
         </div>
       </div>
     </div>
-    <div class="col-lg-4 pt-3">
-      <div class="card">
+    <div class="col-lg-3 col-md-6 pt-3">
+      <div class="card border-0">
         <img src="image/pexels-ray-piedra-1696735.jpg" class="img-fluid" alt="plants">
         <div class="card-img-overlay">
           <h4 class="card-title">3. attēls</h5>
         </div>
       </div>
     </div>
+    <div class="col-lg-3 col-md-6 pt-3">
+      <div class="card border-0">
+        <img src="image/pexels-julia-sakelli-1342494.jpg" class="img-fluid" alt="plants">
+        <div class="card-img-overlay">
+          <h4 class="card-title">4. attēls</h5>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
-<!-- <div class="container mt-5">
-  <h2 id="attelu-rezgis">Attēlu režģis</h2>
-  <div class="row">
-    <div class="col-lg-4 pt-3">
-      <img src="image/pexels-vasanth-babu-797797.jpg" class="img-fluid" alt="plants">
-    </div>
-    <div class="col-lg-4 pt-3">
-      <img src="image/pexels-photomix-company-1002703.jpg" class="img-fluid" alt="plants">
-    </div>
-    <div class="col-lg-4 pt-3">
-      <img src="image/pexels-ray-piedra-1696735.jpg" class="img-fluid" alt="plants">
-    </div>
-  </div>
-</div> -->
 
 <div class="container mt-5">
-  <h2 id="teksts">Teksts</h2>
-  <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse
-     tempus sit amet sem sit amet condimentum. Fusce condimentum est eget sem vehicula, quis imperdiet quam varius. Maecenas eu varius mi. 
-     Duis nunc nibh, tincidunt quis elementum et, eleifend quis urna. Maecenas enim nisi, fringilla et auctor in, aliquam et nibh. 
-     Nulla dapibus magna vitae ipsum mollis sagittis. Cras ultrices purus fringilla eleifend vestibulum. Nullam ullamcorper lobortis felis 
-     a euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus at ornare orci. Ut diam 
-     est, venenatis et lectus et, aliquam vulputate metus. Proin a mi sollicitudin, tempor ante vitae, ullamcorper odio.</p>
-</div>
-
-<div class="container my-5">
-  <h2 id="pielagojams-attels">Pielāgojams attēls</h2>
-  <img src="image/pexels-cottonbro-4505144.jpg" class="img-fluid pt-3" alt="plants">
+  <h2 id="teksts">Flexbox ar tekstu</h2>
+  <div class="pt-3 d-flex flex-wrap flex-md-nowrap">
+    <div class="flex-fill">
+      <p class="pr-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse
+        tempus sit amet sem sit amet condimentum. Fusce condimentum est eget sem vehicula, quis imperdiet quam varius. Maecenas eu varius mi. 
+        Duis nunc nibh, tincidunt quis elementum et, eleifend quis urna. Maecenas enim nisi, fringilla et auctor in, aliquam et nibh. 
+        Nulla dapibus magna vitae ipsum mollis sagittis. Cras ultrices purus fringilla eleifend vestibulum. Nullam ullamcorper lobortis felis 
+        a euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus at ornare orci. Ut diam 
+        est, venenatis et lectus et, aliquam vulputate metus. Proin a mi sollicitudin, tempor ante vitae, ullamcorper odio.</p>
+    </div>
+    <div class="flex-fill">
+      <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus velit leo, congue vel feugiat quis, convallis a turpis. Suspendisse
+        tempus sit amet sem sit amet condimentum. Fusce condimentum est eget sem vehicula, quis imperdiet quam varius. Maecenas eu varius mi.</p>
+    </div>
+  </div>
 </div>
 
 </body>
-
 </html>
